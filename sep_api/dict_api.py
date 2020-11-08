@@ -73,6 +73,9 @@ def hello_world():
     print(samples)
 
     dict = {'word':word,'phonetic':phonetic,'translate':translate,'distortion':distortion,'samples':samples}
+
+    close_db(conn,cur)
+    
     return json.dumps(dict)
 
 
